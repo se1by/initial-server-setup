@@ -1,0 +1,8 @@
+alias ll="ls -la"
+alias sc-start="systemctl start"
+alias sc-status="systemctl status"
+alias sc-stop="systemctl stop"
+alias sc-restart="systemctl restart"
+alias sc-reload="systemctl reload"
+alias e64="base64"
+alias d64="base64 -d"

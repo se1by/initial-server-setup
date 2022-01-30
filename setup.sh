@@ -54,6 +54,13 @@ chown -R jonas:jonas /home/jonas
 chmod 700 /home/jonas/.ssh
 chmod 600 /home/jonas/.ssh/*
 
+echo "Setting up shells for root and jonas..."
+cp zshrc /root/.zshrc
+cp aliases.zsh /root/.aliases.zsh
+cp zshrc /home/jonas/.zshrc
+cp aliases.zsh /home/jonas/.aliases.zsh
+chsh -s $(which zsh) root
+
 echo "Setting up german keyboard layout..."
 cp keyboard /etc/default/keyboard
 setupcon

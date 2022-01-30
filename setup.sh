@@ -65,7 +65,7 @@ sed -i s/BORG_DIR=\"__REPLACE_ME__\"/BORG_DIR=\"$(hostname)\"/ /usr/local/bin/ba
 sed -i s/BORG_USER=\"__REPLACE_ME__\"/BORG_USER=\"$BORG_USER\"/ /usr/local/bin/backup	
 crontab -l | grep "/usr/local/bin/backup" || crontab -l | { cat; echo "0 0 * * * /usr/local/bin/backup > /dev/null 2>&1"; } | crontab -
 echo "Creating root ssh key for backups..."
-ssh-keygen -b 2048 -t rsa -f /root/.ssh/id_rsa -q -N ""
+ssh-keygen -b 2048 -t rsa -f /root/.ssh/id_rsa -q -N "" -C "jonas+$(hostname)@seibert.ninja"
 
 echo ""
 echo ".--------------------------."

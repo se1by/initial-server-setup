@@ -56,8 +56,12 @@ chmod 600 /home/jonas/.ssh/*
 
 echo "Setting up shells for root and jonas..."
 cp zshrc /root/.zshrc
+cp zshenv /root/.zshenv
+cp p10k.zsh /root/.p10k.zsh
 cp aliases.zsh /root/.aliases.zsh
 cp zshrc /home/jonas/.zshrc
+cp zshenv /home/jonas/.zshenv
+cp p10k.zsh /home/jonas/.p10k.zsh
 cp aliases.zsh /home/jonas/.aliases.zsh
 chsh -s $(which zsh) root
 
